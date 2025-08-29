@@ -1,0 +1,21 @@
+blog_app/
+│
+├── public/ 
+│ ├── index.php 
+│ ├── blogs.php 
+│ ├── blog_detail.php 
+│ ├── register.php 
+│ ├── login.php 
+│ ├── profile.php 
+│ ├── logout.php 
+│ ├── write_blog.php 
+│ ├── write_comment.php 
+│ ├── header.php 
+│ └── footer.php 
+│ ├── assets/
+│ │ ├── css/
+│ │ │ └── style.css 
+│ │ └── images/ 
+│ └── includes/
+└── config/
+ └── database.php # Database connection
