@@ -1,0 +1,50 @@
+Folder structure - 
+
+blog_app/
+│
+|── config/ 
+│   └── database.php
+│
+├── public/                
+│   │── assets/
+│   │   │── css/ 
+│   │   │    └── styles.css  
+│   │   └── images/ 
+│   │
+│   ├── index.php
+│   ├── blogs.php
+│   ├── blog_detail.php
+│   ├── register.php
+│   ├── login.php
+│   ├── profile.php
+│   ├── write_blog.php
+│   ├── write_comment.php
+│   └── logout.php
+│
+└── src/
+│   ├── Models/
+│   │   ├── User.php
+│   │   ├── Blog.php
+│   │   └── Comment.php
+│   │
+│   └── Services/
+│       ├── UserService.php
+│       ├── BlogService.php
+│       └── CommentService.php
+│   │
+└── templates/
+        └── includes/
+            ├── header.php
+            └── footer.php
+
+
+Namespaces - 
+
+src/Database/Connection.php → namespace App\Database;
+src/Models/User.php → namespace App\Models;
+src/Models/Blog.php → namespace App\Models;
+src/Models/Comment.php → namespace App\Models;
+src/Services/AuthService.php → namespace App\Services;
+src/Services/BlogService.php → namespace App\Services;
+src/Services/CommentService.php → namespace App\Services;
+src/Utils/Helpers.php → namespace App\Utils;
