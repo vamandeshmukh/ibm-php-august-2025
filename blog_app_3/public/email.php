@@ -6,6 +6,13 @@ use PHPMailer\PHPMailer\Exception;
 use Dotenv\Dotenv;
 
 session_start();
+$authService = new App\Services\AuthService();
+
+if (!$authService->isLoggedIn()) {
+    header('Location: login.php');
+    exit;
+}
+
 
 // Load environment variables
 $dotenv = Dotenv::createImmutable(__DIR__ . '/..');
@@ -29,12 +36,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         try {
             $mail->isSMTP();
-            $mail->Host       = 'smtp.gmail.com';
-            $mail->SMTPAuth   = true;
-            $mail->Username   = $_ENV['GMAIL_USER'];
-            $mail->Password   = $appPassword;
+            $mail->Host = 'smtp.gmail.com';
+            $mail->SMTPAuth = true;
+            $mail->Username = $_ENV['GMAIL_USER'];
+            $mail->Password = $appPassword;
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port       = 587;
+            $mail->Port = 587;
 
             $mail->setFrom($_ENV['GMAIL_USER'], $_ENV['GMAIL_NAME'] ?? 'App Mailer');
             $mail->addAddress($to);
@@ -46,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $mail->isHTML(true);
             $mail->Subject = $subject;
-            $mail->Body    = nl2br($body);
+            $mail->Body = nl2br($body);
             $mail->AltBody = $body;
 
             $mail->send();
@@ -72,9 +79,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <form method="POST" action="email.php" enctype="multipart/form-data">
         <div>
             <label for="from">From:</label>
-            <input type="email" id="from" name="from"
-                   value="<?php echo htmlspecialchars($_ENV['GMAIL_USER']); ?>"
-                   readonly>
+            <input type="email" id="from" name="from" value="<?php echo htmlspecialchars($_ENV['GMAIL_USER']); ?>"
+                readonly>
         </div>
 
         <div>
