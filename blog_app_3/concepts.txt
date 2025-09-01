@@ -1,0 +1,68 @@
+Concept: Application Entry Point
+File: public/index.php
+Description: Main landing page of the blog app.
+
+Concept: Blog Listing
+File: public/blogs.php
+Description: Displays all blog posts.
+
+Concept: Blog Detail
+File: public/blog_detail.php
+Description: Displays a single blog post with its comments.
+
+Concept: User Registration
+File: public/register.php
+Description: Handles user signup.
+
+Concept: User Login
+File: public/login.php
+Description: Handles user authentication.
+
+Concept: User Logout
+File: public/logout.php
+Description: Logs out the user.
+
+Concept: User Profile
+File: public/profile.php
+Description: Displays user information and their blogs.
+
+Concept: Write Blog
+File: public/write_blog.php
+Description: Allows logged-in users to create a blog post.
+
+Concept: Write Comment
+File: public/write_comment.php
+Description: Allows users to add comments on blogs.
+
+Concept: Configuration
+File: config/database.php
+Description: Holds database connection details.
+
+Concept: Reusable Header
+File: templates/includes/header.php
+Description: Common header section with navigation.
+
+Concept: Reusable Footer
+File: templates/includes/footer.php
+Description: Common footer section.
+
+Concept: Authentication Service
+File: src/AuthService.php
+Description: Handles user login, logout, and session management.
+
+Concept: Blog Service
+File: src/BlogService.php
+Description: Handles CRUD operations for blogs.
+
+Concept: Comment Service
+File: src/CommentService.php
+Description: Handles CRUD operations for comments.
+
+Concept: User Service
+File: src/UserService.php
+Description: Handles CRUD operations for users.
+
+Concept: Dependency Manager
+File: composer.json
+Description: Lists project dependencies.
+

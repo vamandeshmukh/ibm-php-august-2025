@@ -1,0 +1,33 @@
+blog_app_3/
+├── .env
+├── composer.json
+├── composer.lock
+├── concepts.txt
+├── config/
+│   ├── config.php
+│   └── database.php
+├── public/
+│   ├── assets/
+│   │   ├── css/
+│   │   │   └── styles.css
+│   │   └── images/
+│   ├── Database/
+│   │   └── Connection.php
+│   ├── email.php
+│   ├── index.php
+│   ├── login.php
+│   ├── logout.php
+│   ├── profile.php
+│   └── register.php
+├── src/
+│   ├── Models/
+│   │   └── User.php
+│   └── Services/
+│       └── AuthService.php
+├── templates/
+│   └── includes/
+│       ├── footer.php
+│       └── header.php
+└── vendor/
+    ├── autoload.php
+    └── composer/
